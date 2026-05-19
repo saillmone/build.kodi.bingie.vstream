@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons><addon id="plugin.video.vstream" name="vStream" version="3.9.3" provider-name="venom-xbmc-addons">
+    <requires>
+
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="repository.vstream" />
+        <import addon="script.module.qrcode" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.dnspython" optional="true" />
+        
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+ 
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/lib/gui/menuInformation.py">
+		        <label>[COLOR lightcoral]$ADDON[plugin.video.vstream 30208][/COLOR]</label>
+				<visible>Window.IsVisible(home) + ListItem.Property(sMeta)</visible>
+            </item>
+            <item library="resources/lib/gui/menuAddBookmark.py">
+		        <label>[COLOR lightcoral]$ADDON[plugin.video.vstream 30210][/COLOR]</label>
+				<visible>Window.IsVisible(home) + !ListItem.Property(isBookmark) + ListItem.Property(sMeta)</visible>
+            </item>
+            <item library="resources/lib/gui/menuSimil.py">
+		        <label>[COLOR lightcoral]$ADDON[plugin.video.vstream 30213][/COLOR]</label>
+				<visible>Window.IsVisible(home) + ListItem.Property(sMeta)</visible>
+            </item>
+            <item library="resources/lib/gui/menuDelBookmark.py">
+		        <label>$ADDON[plugin.video.vstream 30412]</label>
+				<visible>Window.IsVisible(home) + ListItem.Property(isBookmark)</visible>
+            </item>
+            <item library="resources/lib/gui/menuDelViewing.py">
+		        <label>$ADDON[plugin.video.vstream 30412]</label>
+				<visible>Window.IsVisible(home) + ListItem.Property(isViewing)</visible>
+            </item>
+		</menu>
+    </extension>
+
+    <extension point="xbmc.service" library="service.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="fr_FR">vStream par Venom, TmpName, Arias800, Razorex, SiZaNiK, Yodidon.</summary>
+        <description lang="fr_FR">vStream est un module de streaming Francais, retrouvez tous vos films, series, japanimes, documentaires, reportages, concerts, sports,...</description>
+        <disclaimer lang="fr_FR">vStream est un addon de streaming videos. Obtenez du support aupres de notre partenaire [COLOR red]"les alKODIques"[/COLOR].</disclaimer>
+        <summary lang="fr_CA">vStream par Venom, TmpName, Arias800, Razorex, SiZaNiK, Yodidon.</summary>
+        <description lang="fr_CA">vStream est un module de streaming Francais, trouvez tous vos films, series et mangas.</description>
+        <disclaimer lang="fr_CA">vStream est un addon de streaming videos</disclaimer>
+        <summary lang="en_GB">vStream by Venom, TmpName, Arias800, Razorex, SiZaNiK, Yodidon.</summary>
+        <description lang="en_GB">vStream module and a French streaming, find all your movies, TV shows and mangas.</description>
+        <disclaimer lang="en_GB">vStream is a video streaming addon</disclaimer>
+        <summary lang="en_NZ">vStream by Venom, TmpName, Arias800, Razorex, SiZaNiK, Yodidon.</summary>
+        <description lang="en_NZ">vStream module and a French streaming, find all your movies, TV shows and mangas.</description>
+        <disclaimer lang="en_NZ">vStream is a video streaming addon</disclaimer>
+        <summary lang="en_US">vStream by Venom, TmpName, Arias800, Razorex, SiZaNiK, Yodidon.</summary>
+        <description lang="en_US">vStream module and a French streaming, find all your movies, TV shows and mangas.</description>
+        <disclaimer lang="en_US">vStream is a video streaming addon</disclaimer>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE</license>
+        <forum>https://github.com/Kodi-vStream/venom-xbmc-addons/issues</forum>
+        <source>https://github.com/Kodi-vStream/venom-xbmc-addons/</source>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>screenshot-01.jpg</screenshot>
+            <screenshot>screenshot-02.jpg</screenshot>
+            <screenshot>screenshot-03.jpg</screenshot>
+        </assets>
+    </extension>
+</addon><addon id="repository.smallion" name="Dépôt smaLLion" version="1.0.0" provider-name="smaLLion">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.addon.repository" name="Dépôt smaLLion">
+        <dir>
+            <info compressed="false">https://saillmone.github.io/build.kodi.bingie.vstream/addons.xml</info>
+            <datadir zip="true">https://saillmone.github.io/build.kodi.bingie.vstream/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Dépôt officiel pour les extensions modifiées de smaLLion</summary>
+        <description>Permet le déploiement et la mise à jour automatique du preloader, de vStream et de Bingie.</description>
+    </extension>
+</addon><addon id="script.preloader.smallion" name="Wizard smaLLion" version="1.0.0" provider-name="smaLLion">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>GPL-2.0-or-later</license>
+        <summary lang="fr_FR">Wizard d'installation du pack Bingie pour Kodi Omega</summary>
+        <description lang="fr_FR">Wizard d'installation du pack Bingie pour Kodi Omega.
+
+Contenu du pack :
+• Bingie (skin, widgets, TMDB Bingie Helper)
+• vStream (listes Pastebin Les Alkodiques)
+• Trakt, Up Next, YouTube, OpenWizard
+
+Téléchargement depuis le dépôt GitHub privé. Les dossiers addons/ et userdata/ seront écrasés. Possibilité de renseigner vos clés API avant l'installation.</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="skin.bingie" version="2.0.2" name="Bingie" provider-name="matke">
+	<requires>
+		<import version="5.17.0" addon="xbmc.gui" />
+		<import addon="script.bingie.helper" version="1.1.2" />
+		<import addon="script.bingie.toolbox" version="1.0.0" />
+		<import addon="script.bingie.widgets" version="1.0.1" />
+		<import addon="script.skinshortcuts" version="2.0.3" />
+		<import addon="resource.images.studios.coloured" version="1.0.0" />
+		<import addon="plugin.video.tmdb.bingie.helper" version="1.0.1" />
+		<import addon="plugin.program.autocompletion" version="2.1.3" />
+	</requires>
+	<extension debugging="false" defaultthemename="Textures.xbt" effectslowdown="1" point="xbmc.gui.skin">
+        <res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
+    </extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Kodi skin with Netflix layout.</summary>
+		<summary lang="zh_CN">Netflix 布局 Kodi 皮肤。</summary>
+		<summary lang="es_ES">Kodi con diseño Netflix.</summary>
+		<summary lang="es_AR">Kodi con diseño Netflix.</summary>
+		<summary lang="es_MX">Kodi con diseño Netflix.</summary>
+		<description lang="en_GB">Bingie – The home of your favorite movies and shows!</description>
+		<description lang="zh_CN">Bingie -你最喜欢的电影和节目的主界面！</description>
+		<description lang="es_ES">Bingie - tu hogar de películas y series favoritas!</description>
+		<description lang="es_AR">Bingie - tu hogar de películas y series favoritas!</description>
+		<description lang="es_MX">Bingie - tu hogar de películas y series favoritas!</description>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum />
+		<source />
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>			
+		</assets>
+	</extension>
+</addon></addons>

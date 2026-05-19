@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addon id="script.preloader.smallion" name="Wizard smaLLion" version="1.0.0" provider-name="smaLLion">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>GPL-2.0-or-later</license>
+        <summary lang="fr_FR">Wizard d'installation du pack Bingie pour Kodi Omega</summary>
+        <description lang="fr_FR">Wizard d'installation du pack Bingie pour Kodi Omega.
+
+Contenu du pack :
+• Bingie (skin, widgets, TMDB Bingie Helper)
+• vStream (listes Pastebin Les Alkodiques)
+• Trakt, Up Next, YouTube, OpenWizard
+
+Téléchargement depuis le dépôt GitHub privé. Les dossiers addons/ et userdata/ seront écrasés. Possibilité de renseigner vos clés API avant l'installation.</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>

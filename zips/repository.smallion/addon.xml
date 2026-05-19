@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addon id="repository.smallion" name="Dépôt smaLLion" version="1.0.0" provider-name="smaLLion">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.addon.repository" name="Dépôt smaLLion">
+        <dir>
+            <info compressed="false">https://saillmone.github.io/build.kodi.bingie.vstream/addons.xml</info>
+            <datadir zip="true">https://saillmone.github.io/build.kodi.bingie.vstream/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Dépôt officiel pour les extensions modifiées de smaLLion</summary>
+        <description>Permet le déploiement et la mise à jour automatique du preloader, de vStream et de Bingie.</description>
+    </extension>
+</addon>
