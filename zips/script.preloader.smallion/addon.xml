@@ -13,7 +13,7 @@
 Contenu du pack :
 • Bingie (skin, widgets, TMDB Bingie Helper)
 • vStream (listes Pastebin Les Alkodiques)
-• Trakt, Up Next, YouTube, OpenWizard
+• Trakt, Up Next, YouTube, OpenWizard, AutoCompletion for virtual keyboard
 
 Téléchargement depuis le dépôt GitHub privé. Les dossiers addons/ et userdata/ seront écrasés. Possibilité de renseigner vos clés API avant l'installation.</description>
         <assets>

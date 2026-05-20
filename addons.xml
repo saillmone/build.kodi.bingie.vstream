@@ -75,13 +75,17 @@
     <extension point="xbmc.addon.repository" name="Dépôt smaLLion">
         <dir>
             <info compressed="false">https://saillmone.github.io/build.kodi.bingie.vstream/addons.xml</info>
+            <checksum>https://saillmone.github.io/build.kodi.bingie.vstream/addons.xml.md5</checksum>
             <datadir zip="true">https://saillmone.github.io/build.kodi.bingie.vstream/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <summary>Dépôt officiel pour les extensions modifiées de smaLLion</summary>
-        <description>Permet le déploiement et la mise à jour automatique du preloader, de vStream et de Bingie.</description>
+        <description>Dépôt officiel smaLLion. IMPORTANT : si une erreur de connexion au dépôt apparaît après installation, ferme Kodi et relance-le — le dépôt se synchronise automatiquement au démarrage.</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
     </extension>
 </addon><addon id="script.preloader.smallion" name="Wizard smaLLion" version="1.0.0" provider-name="smaLLion">
     <requires>
@@ -97,7 +101,7 @@
 Contenu du pack :
 • Bingie (skin, widgets, TMDB Bingie Helper)
 • vStream (listes Pastebin Les Alkodiques)
-• Trakt, Up Next, YouTube, OpenWizard
+• Trakt, Up Next, YouTube, OpenWizard, AutoCompletion for virtual keyboard
 
 Téléchargement depuis le dépôt GitHub privé. Les dossiers addons/ et userdata/ seront écrasés. Possibilité de renseigner vos clés API avant l'installation.</description>
         <assets>
