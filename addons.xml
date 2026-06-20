@@ -30,11 +30,17 @@
     <screenshot>resources/screenshot-02.jpg</screenshot>
   </assets>
 </extension>
-</addon><addon id="plugin.video.vstream" name="vStream" version="3.9.3" provider-name="venom-xbmc-addons">
+</addon><addon id="plugin.video.vstream" name="vStream" version="4.0.2" provider-name="venom-xbmc-addons">
     <requires>
 
-        <import addon="xbmc.python" version="3.0.0" />
-        <import addon="repository.vstream" />
+        <trycatch>
+            <try>
+                <import addon="xbmc.python" version="3.0.0" />
+            </try>
+            <catch>
+                <import addon="xbmc.python" version="2.24.0" />
+            </catch>
+        </trycatch>
         <import addon="script.module.qrcode" />
         <import addon="script.module.requests" />
         <import addon="script.module.dnspython" optional="true" />
