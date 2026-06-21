@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addon id="script.preloader.smallion" name="Wizard smaLLion" version="1.0.0" provider-name="smaLLion">
+<addon id="script.preloader.smallion" name="Wizard smaLLion" version="1.1.1" provider-name="smaLLion">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
@@ -15,7 +15,10 @@ Contenu du pack :
 • vStream (listes Pastebin Les Alkodiques)
 • Trakt, Up Next, YouTube, OpenWizard, AutoCompletion for virtual keyboard
 
-Téléchargement depuis le dépôt GitHub privé. Les dossiers addons/ et userdata/ seront écrasés. Possibilité de renseigner vos clés API avant l'installation.</description>
+Téléchargement depuis le dépôt GitHub. Les dossiers addons/ et userdata/ seront écrasés.
+
+Configuration des clés API : import via Pastebin ou saisie manuelle dans une interface dédiée. Tableau de bord centralisé accessible en mode standalone (RunScript avec mode=dashboard). Les clés ne sont plus stockées localement dans ce preloader : elles sont injectées directement dans les addons cibles.</description>
+        <news>Migration Rentry vers Pastebin. Patch à la volée des chemins userdata pour skin.bingie.mod.</news>
         <assets>
             <icon>icon.png</icon>
         </assets>
