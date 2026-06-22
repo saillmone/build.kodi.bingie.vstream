@@ -231,7 +231,7 @@
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.preloader.smallion" name="Wizard smaLLion" version="1.1.5" provider-name="smaLLion">
+</addon><addon id="script.preloader.smallion" name="Wizard smaLLion" version="1.1.6" provider-name="smaLLion">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
@@ -250,7 +250,7 @@ Contenu du pack :
 Téléchargement depuis le dépôt GitHub. Les dossiers addons/ et userdata/ seront écrasés.
 
 Configuration des clés API : import via Pastebin ou saisie manuelle dans une interface dédiée. Tableau de bord centralisé accessible en mode standalone (RunScript avec mode=dashboard). Les clés ne sont plus stockées localement dans ce preloader : elles sont injectées directement dans les addons cibles.</description>
-        <news>Dialogue clés API natif Bingie, clés en clair, release build v1.1.3.</news>
+        <news>Sync GUI wizard, confirmation Retour, textures Estuary, busy dialog dashboard.</news>
         <assets>
             <icon>icon.png</icon>
         </assets>
